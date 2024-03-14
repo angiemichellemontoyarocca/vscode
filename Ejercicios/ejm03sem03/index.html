@@ -1,0 +1,47 @@
+   <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form action="">
+            <div>
+                <label for="usuario">User</label>
+                <input type="text" id='usuario' />
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id='password' />
+            </div>
+            <input type="submit" onclick='return validarFormulario()' value="Procesar" />
+        </form>
+        <div id='error'></div>
+
+        <script type="text/javascript">
+            document.getElementById('usuario').focus();
+            var user = document.getElementById('usuario');
+            var pass = document.getElementById('password');
+            var erro = document.getElementById('error');
+            erro.style.color = 'red';
+
+            function validarFormulario() {
+                console.log('Mensaje de prueba')
+
+                var errores = []
+
+                if (user.value === null || user.value === '') {
+                    errores.push('Ingresar Usuario');
+                }
+
+                if (pass.value === null || pass.value === '') {
+                    errores.push('Ingresar Password');
+                }
+
+                erro.innerHTML = errores.join(', ');
+
+
+                return false
+            }
+        </script>
+
+    </body>
+    </html>

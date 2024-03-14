@@ -1,0 +1,37 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css"> -->
+</head>
+<body>
+    <form action="">
+        <select id="ciudades" name="ciudades">
+            <option value="Lima">Lima</option>
+            <option value="Trujillo">Trujillo</option>
+            <option value="Chiclayo">Chiclayo</option>
+            <option value="Ica">Ica</option>
+        </select>
+        
+        <input type="submit" value="procesar" onclick='return Res()'/>
+
+    </form>
+    <div class="resultadoFinal" id="resultado"></div>    
+</body>
+</html>
+<script type="text/javascript">
+    var ciudades = document.getElementById("ciudades");
+
+     function Res() {
+        // Obtener el valor de la opción seleccionada
+        //var valorSeleccionado= ciudades.options[ciudades.selectedIndex].value;
+        console.log(ciudades.options[ciudades.selectedIndex].value);
+        resultado.innerHTML = ciudades.options[ciudades.selectedIndex].value;
+        //resultado.innerHTML = ciudades.options[ciudades.selectedIndex].text;
+
+        return false;
+    }
+
+</script>

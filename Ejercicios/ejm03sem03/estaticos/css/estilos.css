@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to top left, #23415a, blue);
+    background-repeat: no-repeat;
+    height: 200vh;
+    font-family: 'Arial';
+}
+
+form{
+    width: 40%;
+    margin: 60px auto; /*https://developer.mozilla.org/es/docs/Web/CSS/padding*/
+    background: #fff;
+    height: 900px;
+    border-radius: 10px;
+    padding: 60px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+h2{
+    font-size: 40px;
+}
+
+input{
+    display: inline-block;
+    width: 80%;
+    margin-top: 40px;
+    padding: 10px 0;
+    border: none;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    color: green;
+}
+select{
+    display: inline-block;
+    width: 80%;
+    margin-top: 40px;
+    padding: 10px 0;
+    border: none;
+    font-size: 20px;
+    border-bottom: 1px solid #ccc;
+    color: green;
+}
+
+input[type="submit"]{
+    margin-top: 60px;
+    background-image: linear-gradient(to top left, #23415a, blue);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.resultadoFinal
+{
+    display: inline-block;
+    width: 80%;
+    margin-top: 40px;
+    padding: 10px 0; /*Derecha y izquierda 0*/
+    font-size: 20px;
+    color: #fff;
+}
+@media screen and (max-width:950px){
+    form{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:550px){
+    form{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:350px){
+    form{
+        width: 90%;
+    }
+
+    h2{
+        font-size: 35px;
+    }
+}

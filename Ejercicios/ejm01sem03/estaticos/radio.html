@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <form action="">
+        <input type="radio" value="Universidad" name="tipo"/> Universidad
+        <input type="radio" value="Instituto" name="tipo" checked/> Instituto
+        <input type="radio" value="Colegio" name="tipo" /> Colegio
+        
+        <input type="text" id="resultado"/>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+    var elementos = document.getElementsByName("tipo");
+    var resultado = document.getElementById("resultado");
+
+    for(var i=0; i<elementos.length; i++) {
+        alert(" Tipo de estudio: " + elementos[i].value + "\n Seleccionado: "
+            + elementos[i].checked);
+        if (elementos[i].checked) {
+            console.log(elementos[i].value);
+            resultado.value = elementos[i].value;
+        }
+    }
+    
+</script>

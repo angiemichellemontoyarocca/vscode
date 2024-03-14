@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" value="acuerdos :)" id="acuerdos"/>Acepta las clausulas del contrato
+        <input type="checkbox" value="otros" id="otros" />Otros acuerdos importantes
+        <input type="submit" value="procesar" onclick='return resultado()' />
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+    var acuerdos = document.getElementById("acuerdos");
+    var otros = document.getElementById("otros");
+    function resultado() {
+        if (acuerdos.checked === true) {
+            alert("Seleccionado:" + acuerdos.value);
+        }
+        else if (otros.checked === true)
+            alert("Seleccionado:" + otros.value);
+        else {
+            alert("No Seleccionado");
+        }
+        return false;
+    }
+</script>
